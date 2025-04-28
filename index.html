@@ -5,70 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mackenzie Nice | QA Tester Portfolio</title>
     <style>
-        /* Body styles */
         body {
             margin: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #212529;
-            color: #000000; /* Black text */
+            background-color: #212529; /* Black background */
+            color: #f8f9fa; /* White text */
         }
 
-        /* Header styles */
         header {
-            background: linear-gradient(to right, #009688, #004d40); /* Gradient background */
-            color: #ffffff; /* White text */
-            padding: 1.5rem 2rem;
+            background-color: #009688; /* Deep cyan blue */
+            color: #f8f9fa;
+            padding: 3rem 1rem;
             text-align: center;
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
-            border-bottom: 2px solid #00bcd4;
-            border-radius: 0 0 20px 20px;
-            position: relative;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         header h1 {
-            font-size: 2rem; /* Increased size */
-            letter-spacing: 2px;
-            font-family: 'Arial Black', sans-serif;
-            color: #ffffff;
-            text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.3);
+            font-size: 3rem;
         }
 
         header p {
             font-size: 1.2rem;
-            font-weight: 300;
-            color: #ffffff;
-            margin-top: 0.5rem;
+        }
+
+        nav {
+            margin-top: 1rem;
         }
 
         nav a {
-            color: #ffffff;
-            margin: 0 1.5rem;
+            color: #f8f9fa;
+            margin: 0 1rem;
             text-decoration: none;
             font-weight: bold;
             font-size: 1.1rem;
-            padding: 0.5rem 1rem;
-            border: 2px solid #00bcd4;
+            padding: 0.4rem 0.8rem;
             border-radius: 8px;
-            transition: transform 0.3s ease;
-            display: inline-block;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
         }
 
         nav a:hover {
             color: #00bcd4;
-            transform: scale(1.1);
+            border-color: #00bcd4;
         }
 
-        nav a:active {
-            background-color: #00bcd4;
-            color: #ffffff;
-        }
-
-        /* Section styles */
         section {
             padding: 4rem 2rem;
             max-width: 1000px;
             margin: 0 auto;
-            background-color: #f8f9fa;
+            background-color: #ffffff;
             border-radius: 12px;
             box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
             margin-bottom: 2rem;
@@ -76,47 +61,32 @@
         }
 
         h2 {
-            color: #000000;
+            color: #212529;
             border-bottom: 2px solid #009688;
             padding-bottom: 0.5rem;
             margin-bottom: 1rem;
-            font-size: 2rem;
-            letter-spacing: 1px;
         }
 
-        /* Games section styles */
         .games {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             gap: 1.5rem;
             margin-top: 2rem;
         }
 
         .game-card {
             background-color: #ffffff;
-            padding: 1.5rem;
+            padding: 1rem;
             border: 1px solid #dee2e6;
-            border-radius: 12px;
+            border-radius: 8px;
             text-align: center;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease-in-out;
         }
 
         .game-card h3 {
-            font-size: 1.3rem;
-            color: #000000;
+            font-size: 1.4rem;
+            color: #212529;
             margin-bottom: 0.5rem;
-        }
-
-        .game-card p {
-            font-size: 1rem;
-            color: #000000;
-            margin-bottom: 1rem;
-        }
-
-        .game-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
         }
 
         .game-images {
@@ -135,7 +105,10 @@
             cursor: pointer;
         }
 
-        /* Footer styles */
+        .game-image:hover {
+            opacity: 0.8;
+        }
+
         footer {
             background-color: #212529;
             color: #f8f9fa;
@@ -149,64 +122,42 @@
             font-size: 0.9rem;
         }
 
-        /* Lightbox styles */
-        .modal {
+        /* Lightbox styling */
+        .lightbox {
             display: none;
             position: fixed;
             z-index: 1;
-            padding-top: 100px;
             left: 0;
             top: 0;
             width: 100%;
             height: 100%;
             overflow: auto;
-            background-color: rgba(0, 0, 0, 0.9);
+            background-color: rgba(0, 0, 0, 0.8);
         }
 
-        .modal-content {
+        .lightbox-content {
+            position: relative;
             margin: auto;
             display: block;
-            width: 80%;
-            max-width: 700px;
+            max-width: 80%;
+            max-height: 80%;
         }
 
-        .close {
+        .lightbox-close {
             position: absolute;
             top: 15px;
             right: 35px;
-            color: #fff;
+            color: #f8f9fa;
             font-size: 40px;
             font-weight: bold;
-            transition: 0.3s;
+            transition: all 0.3s ease;
         }
 
-        .close:hover,
-        .close:focus {
-            color: #ff6347;
+        .lightbox-close:hover,
+        .lightbox-close:focus {
+            color: #00bcd4;
             text-decoration: none;
             cursor: pointer;
-        }
-
-        /* Individual section designs */
-        #about {
-            padding: 2rem;
-            border-radius: 12px;
-            border: 2px solid #009688;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        #experience {
-            padding: 2rem;
-            border-radius: 12px;
-            border: 2px solid #009688;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        #games {
-            padding: 2rem;
-            border-radius: 12px;
-            border: 2px solid #009688;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         @media (max-width: 768px) {
@@ -249,66 +200,75 @@
         <li>Collaborating with development and design teams to identify and resolve issues</li>
         <li>Cross-platform and device compatibility testing</li>
         <li>Performance optimization and testing to ensure smooth gameplay</li>
-        <li>Experience in building and testing games in Unity and Unreal Engine</li>
     </ul>
 </section>
 
 <section id="games">
-    <h2>Games I Have Assisted In</h2>
-
+    <h2>Games I Have Assisted In Testing</h2>
     <div class="games">
         <div class="game-card">
-            <h3>Game Title</h3>
-            <p>No description provided yet.</p>
+            <h3>Troleu</h3>
+            <p>Role: QA Tester</p>
+            <p>
+                - Identified and documented gameplay logic issues, including soft lock scenarios caused by NPC interactions (e.g., Inspector boarding events locking doors and blocking player progression).<br><br>
+                - Reported collision and movement bugs, such as multiple NPCs overlapping and becoming stuck, requiring manual intervention to resolve.<br><br>
+                - Provided feedback on confusing gameplay elements, focusing on unclear player expectations during time-sensitive events (e.g., limited response window when the Inspector boards).<br><br>
+                - Suggested UI/UX improvements for tutorial clarity, emphasizing simplified control instructions for accessibility to a wider audience.<br><br>
+                - Delivered actionable recommendations to improve player experience, reduce frustration points, and enhance overall game flow.
+            </p>
+            <!-- Multiple images for the game -->
+            <div class="game-images">
+                <img src="Screenshot 2025-04-28 144902.png" alt="Screenshot 1" class="game-image" onclick="openLightbox('Screenshot 2025-04-28 144902.png')">
+                <img src="Screenshot 2025-04-28 144926.png" alt="Screenshot 2" class="game-image" onclick="openLightbox('Screenshot 2025-04-28 144926.png')">
+                <img src="Screenshot 2025-04-28 144952.png" alt="Screenshot 3" class="game-image" onclick="openLightbox('Screenshot 2025-04-28 144952.png')">
+                <img src="Screenshot 2025-04-28 144959.png" alt="Screenshot 4" class="game-image" onclick="openLightbox('Screenshot 2025-04-28 144959.png')">
+                <img src="Screenshot 2025-04-28 145111.png"  alt="Screenshot 5" class="game-image" onclick="openLightbox('Screenshot 2025-04-28 145111.png')">
+                <img src="Screenshot 2025-04-28 145346.png" alt="Screenshot 6" class="game-image" onclick="openLightbox('Screenshot 2025-04-28 145346.png')">
+            </div>
         </div>
         <div class="game-card">
-            <h3>Game Title</h3>
-            <p>No description provided yet.</p>
+            <h3>Game Title 2</h3>
+            <p>Role: QA Tester</p>
+            <p> 
+                - [Your detailed role and tasks in this game here]
+            </p>
+            <!-- Multiple images for Game Title 2 -->
+            <div class="game-images">
+                <img src="image4.jpg" alt="Screenshot 1" class="game-image" onclick="openLightbox('image4.jpg')">
+                <img src="image5.jpg" alt="Screenshot 2" class="game-image" onclick="openLightbox('image5.jpg')">
+                <img src="image6.jpg" alt="Screenshot 3" class="game-image" onclick="openLightbox('image6.jpg')">
+            </div>
         </div>
-        <div class="game-card">
-            <h3>Game Title</h3>
-            <p>No description provided yet.</p>
-        </div>
-        <div class="game-card">
-            <h3>Game Title</h3>
-            <p>No description provided yet.</p>
-        </div>
-        <div class="game-card">
-            <h3>Game Title</h3>
-            <p>No description provided yet.</p>
-        </div>
-        <div class="game-card">
-            <h3>Game Title</h3>
-            <p>No description provided yet.</p>
-        </div>
-        <div class="game-card">
-            <h3>Game Title</h3>
-            <p>No description provided yet.</p>
-        </div>
+        <!-- Additional game cards can be added here -->
     </div>
 </section>
 
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Email: your.email@example.com</p>
+    <p>LinkedIn: linkedin.com/in/yourprofile</p>
+</section>
+
 <footer>
-    <p>&copy; 2025 Mackenzie Nice | QA Tester Portfolio</p>
+    <p>&copy; 2025 Mackenzie Nice. All rights reserved.</p>
 </footer>
 
-<!-- Modal for image lightbox -->
-<div id="modal" class="modal">
-    <span class="close" onclick="closeModal()">&times;</span>
-    <img class="modal-content" id="modal-image">
+<!-- Lightbox Modal -->
+<div id="lightbox" class="lightbox">
+    <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+    <img class="lightbox-content" id="lightbox-image">
 </div>
 
 <script>
-    function openModal(image) {
-        var modal = document.getElementById("modal");
-        var modalImage = document.getElementById("modal-image");
-        modal.style.display = "block";
-        modalImage.src = image.src;
+    // Open the lightbox with the clicked image
+    function openLightbox(imageSrc) {
+        document.getElementById("lightbox").style.display = "block";
+        document.getElementById("lightbox-image").src = imageSrc;
     }
 
-    function closeModal() {
-        var modal = document.getElementById("modal");
-        modal.style.display = "none";
+    // Close the lightbox
+    function closeLightbox() {
+        document.getElementById("lightbox").style.display = "none";
     }
 </script>
 
