@@ -8,13 +8,13 @@
         body {
             margin: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f8f9fa;
-            color: #212529;
+            background-color: #000000; /* Black background */
+            color: #ffffff; /* White text color */
         }
 
         header {
-            background-color: #009688;
-            color: #f8f9fa;
+            background-color: #009688; /* Deep cyan blue */
+            color: #ffffff; /* White text */
             padding: 2rem 1rem;
             text-align: center;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -25,7 +25,7 @@
         }
 
         nav a {
-            color: #f8f9fa;
+            color: #ffffff; /* White text for links */
             margin: 0 1rem;
             text-decoration: none;
             font-weight: bold;
@@ -40,15 +40,15 @@
             padding: 4rem 2rem;
             max-width: 1000px;
             margin: 0 auto;
-            background-color: #ffffff;
-            border-radius: 12px;
+            background-color: #1e1e1e; /* Darker background for sections */
+            border-radius: 12px; 
             box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
             margin-bottom: 2rem;
             border: 2px solid #009688;
         }
 
         h2 {
-            color: #212529;
+            color: #ffffff; /* White text for section titles */
             border-bottom: 2px solid #009688;
             padding-bottom: 0.5rem;
             margin-bottom: 1rem;
@@ -62,7 +62,7 @@
         }
 
         .game-card {
-            background-color: #ffffff;
+            background-color: #333333; /* Dark background for game cards */
             padding: 1rem;
             border: 1px solid #dee2e6;
             border-radius: 8px;
@@ -72,7 +72,7 @@
 
         .game-card h3 {
             font-size: 1.2rem;
-            color: #212529;
+            color: #ffffff; /* White text for game titles */
             margin-bottom: 0.5rem;
         }
 
@@ -89,32 +89,11 @@
             max-width: 250px;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            cursor: pointer;
-        }
-
-        /* Lightbox styles */
-        .lightbox {
-            display: none;
-            position: fixed;
-            z-index: 999;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            justify-content: center;
-            align-items: center;
-        }
-
-        .lightbox img {
-            max-width: 90%;
-            max-height: 90%;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
         }
 
         footer {
             background-color: #212529;
-            color: #f8f9fa;
+            color: #ffffff; /* White text for footer */
             text-align: center;
             padding: 1rem;
             margin-top: 2rem;
@@ -166,6 +145,13 @@
         <li>Cross-platform and device compatibility testing</li>
         <li>Performance optimization and testing to ensure smooth gameplay</li>
     </ul>
+    
+    <h3>Experience with Game Engines & Tools</h3>
+    <ul>
+        <li><strong>Unity:</strong> Experience with building and testing gameplay elements, scripting, and debugging in Unity projects. Involved in testing cross-platform functionality, ensuring stability across different device configurations, and performing regression testing.</li>
+        <li><strong>Unreal Engine:</strong> Familiar with testing projects in Unreal Engine, focusing on performance optimization, scripting issues, and ensuring that the game functions as expected on various hardware platforms.</li>
+        <li><strong>Jira:</strong> Experience using Jira for bug tracking, managing sprints, and collaborating with team members to report and resolve issues efficiently.</li>
+    </ul>
 </section>
 
 <section id="games">
@@ -175,18 +161,31 @@
             <h3>Troleu</h3>
             <p>Role: QA Tester</p>
             <p>
-                - Identified and documented gameplay logic issues, including soft lock scenarios caused by NPC interactions.<br>
-                - Reported collision and movement bugs.<br>
-                - Suggested UI/UX improvements.<br>
-                - Delivered actionable recommendations to improve player experience.
+                - Identified and documented gameplay logic issues, including soft lock scenarios caused by NPC interactions (e.g., Inspector boarding events locking doors and blocking player progression).<br><br>
+                - Reported collision and movement bugs, such as multiple NPCs overlapping and becoming stuck, requiring manual intervention to resolve.<br><br>
+                - Provided feedback on confusing gameplay elements, focusing on unclear player expectations during time-sensitive events (e.g., limited response window when the Inspector boards).<br><br>
+                - Suggested UI/UX improvements for tutorial clarity, emphasizing simplified control instructions for accessibility to a wider audience.<br><br>
+                - Delivered actionable recommendations to improve player experience, reduce frustration points, and enhance overall game flow.
             </p>
             <div class="game-images">
-                <img src="Screenshot 2025-04-28 144902.png" alt="Screenshot 1" class="game-image" onclick="openLightbox(this)">
-                <img src="Screenshot 2025-04-28 144926.png" alt="Screenshot 2" class="game-image" onclick="openLightbox(this)">
-                <img src="Screenshot 2025-04-28 144952.png" alt="Screenshot 3" class="game-image" onclick="openLightbox(this)">
-                <img src="Screenshot 2025-04-28 144959.png" alt="Screenshot 4" class="game-image" onclick="openLightbox(this)">
-                <img src="Screenshot 2025-04-28 145111.png" alt="Screenshot 5" class="game-image" onclick="openLightbox(this)">
-                <img src="Screenshot 2025-04-28 145533.png" alt="Screenshot 6" class="game-image" onclick="openLightbox(this)">
+                <img src="Screenshot 2025-04-28 144902.png" alt="Screenshot 1" class="game-image">
+                <img src="Screenshot 2025-04-28 144926.png" alt="Screenshot 2" class="game-image">
+                <img src="Screenshot 2025-04-28 144952.png" alt="Screenshot 3" class="game-image">
+                <img src="Screenshot 2025-04-28 144959.png" alt="Screenshot 4" class="game-image">
+                <img src="Screenshot 2025-04-28 145111.png"  alt="Screenshot 5" class="game-image">
+                <img src="Screenshot 2025-04-28 145346.png" alt="Screenshot 6" class="game-image">
+            </div>
+        </div>
+        <div class="game-card">
+            <h3>Game Title 2</h3>
+            <p>Role: QA Tester</p>
+            <p> 
+                - [Your detailed role and tasks in this game here]
+            </p>
+            <div class="game-images">
+                <img src="image4.jpg" alt="Screenshot 1" class="game-image">
+                <img src="image5.jpg" alt="Screenshot 2" class="game-image">
+                <img src="image6.jpg" alt="Screenshot 3" class="game-image">
             </div>
         </div>
     </div>
@@ -201,26 +200,6 @@
 <footer>
     <p>&copy; 2025 Mackenzie Nice. All rights reserved.</p>
 </footer>
-
-<!-- Lightbox -->
-<div class="lightbox" id="lightbox">
-    <img src="" alt="Lightbox Image" id="lightbox-img">
-</div>
-
-<script>
-    // Open Lightbox
-    function openLightbox(image) {
-        var lightbox = document.getElementById("lightbox");
-        var lightboxImg = document.getElementById("lightbox-img");
-        lightbox.style.display = "flex";
-        lightboxImg.src = image.src;
-    }
-
-    // Close Lightbox
-    document.getElementById("lightbox").onclick = function() {
-        this.style.display = "none";
-    }
-</script>
 
 </body>
 </html>
