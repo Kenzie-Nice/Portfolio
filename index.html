@@ -216,30 +216,16 @@
                 - Suggested UI/UX improvements for tutorial clarity, emphasizing simplified control instructions for accessibility to a wider audience.<br><br>
                 - Delivered actionable recommendations to improve player experience, reduce frustration points, and enhance overall game flow.
             </p>
-            <!-- Multiple images for the game -->
             <div class="game-images">
                 <img src="Screenshot 2025-04-28 144902.png" alt="Screenshot 1" class="game-image" onclick="openLightbox('Screenshot 2025-04-28 144902.png')">
                 <img src="Screenshot 2025-04-28 144926.png" alt="Screenshot 2" class="game-image" onclick="openLightbox('Screenshot 2025-04-28 144926.png')">
                 <img src="Screenshot 2025-04-28 144952.png" alt="Screenshot 3" class="game-image" onclick="openLightbox('Screenshot 2025-04-28 144952.png')">
                 <img src="Screenshot 2025-04-28 144959.png" alt="Screenshot 4" class="game-image" onclick="openLightbox('Screenshot 2025-04-28 144959.png')">
-                <img src="Screenshot 2025-04-28 145111.png"  alt="Screenshot 5" class="game-image" onclick="openLightbox('Screenshot 2025-04-28 145111.png')">
+                <img src="Screenshot 2025-04-28 145111.png" alt="Screenshot 5" class="game-image" onclick="openLightbox('Screenshot 2025-04-28 145111.png')">
                 <img src="Screenshot 2025-04-28 145346.png" alt="Screenshot 6" class="game-image" onclick="openLightbox('Screenshot 2025-04-28 145346.png')">
             </div>
         </div>
-        <div class="game-card">
-            <h3>Game Title 2</h3>
-            <p>Role: QA Tester</p>
-            <p> 
-                - [Your detailed role and tasks in this game here]
-            </p>
-            <!-- Multiple images for Game Title 2 -->
-            <div class="game-images">
-                <img src="image4.jpg" alt="Screenshot 1" class="game-image" onclick="openLightbox('image4.jpg')">
-                <img src="image5.jpg" alt="Screenshot 2" class="game-image" onclick="openLightbox('image5.jpg')">
-                <img src="image6.jpg" alt="Screenshot 3" class="game-image" onclick="openLightbox('image6.jpg')">
-            </div>
-        </div>
-        <!-- Additional game cards can be added here -->
+        <!-- Add more games below -->
     </div>
 </section>
 
@@ -253,20 +239,17 @@
     <p>&copy; 2025 Mackenzie Nice. All rights reserved.</p>
 </footer>
 
-<!-- Lightbox Modal -->
 <div id="lightbox" class="lightbox">
     <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
     <img class="lightbox-content" id="lightbox-image">
 </div>
 
 <script>
-    // Open the lightbox with the clicked image
     function openLightbox(imageSrc) {
         document.getElementById("lightbox").style.display = "block";
         document.getElementById("lightbox-image").src = imageSrc;
     }
 
-    // Close the lightbox
     function closeLightbox() {
         document.getElementById("lightbox").style.display = "none";
     }
