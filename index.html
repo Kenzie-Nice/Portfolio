@@ -34,9 +34,9 @@
         }
 
         header p {
-            font-size: 1rem;
+            font-size: 1.2rem; /* Increased font size for QA Tester */
             font-weight: 300;
-            color: #000000; /* Black text for the paragraph */
+            color: #ffffff; /* White text */
             margin-top: 0.5rem;
         }
 
@@ -46,12 +46,21 @@
             text-decoration: none;
             font-weight: bold;
             font-size: 1.1rem;
+            padding: 0.5rem 1rem;
+            border: 2px solid #00bcd4;
+            border-radius: 8px;
             transition: transform 0.3s ease;
+            display: inline-block; /* Make the link a block element for padding */
         }
 
         nav a:hover {
             color: #00bcd4;
             transform: scale(1.1); /* Hover effect */
+        }
+
+        nav a:active {
+            background-color: #00bcd4;
+            color: #ffffff;
         }
 
         /* Section styles */
@@ -71,6 +80,8 @@
             border-bottom: 2px solid #009688;
             padding-bottom: 0.5rem;
             margin-bottom: 1rem;
+            font-size: 2rem;
+            letter-spacing: 1px;
         }
 
         /* Games section styles */
@@ -176,6 +187,31 @@
             cursor: pointer;
         }
 
+        /* New unique section designs */
+        #about {
+            background-color: #e8f5e9;
+            border-radius: 12px;
+            border: 2px solid #004d40;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            padding: 2rem;
+        }
+
+        #experience {
+            background-color: #f0f4c3;
+            border-radius: 12px;
+            border: 2px solid #827717;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            padding: 2rem;
+        }
+
+        #games {
+            background-color: #fce4ec;
+            border-radius: 12px;
+            border: 2px solid #ec407a;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            padding: 2rem;
+        }
+
         @media (max-width: 768px) {
             nav a {
                 display: block;
@@ -217,53 +253,38 @@
         <li>Cross-platform and device compatibility testing</li>
         <li>Performance optimization and testing to ensure smooth gameplay</li>
         <li>Experience in building and testing games in Unity and Unreal Engine</li>
-        <li>Familiarity with Jira for bug tracking, task management, and team collaboration</li>
     </ul>
 </section>
 
 <section id="games">
-    <h2>Games I Have Assisted In Testing</h2>
+    <h2>Games I Have Assisted In</h2>
+
     <div class="games">
         <div class="game-card">
-            <h3>Troleu</h3>
-            <p>Role: QA Tester</p>
-            <p>
-                - Identified and documented gameplay logic issues, including soft lock scenarios caused by NPC interactions (e.g., Inspector boarding events locking doors and blocking player progression).<br><br>
-                - Reported collision and movement bugs, such as multiple NPCs overlapping and becoming stuck, requiring manual intervention to resolve.<br><br>
-                - Provided feedback on confusing gameplay elements, focusing on unclear player expectations during time-sensitive events (e.g., limited response window when the Inspector boards).<br><br>
-                - Suggested UI/UX improvements for tutorial clarity, emphasizing simplified control instructions for accessibility to a wider audience.<br><br>
-                - Delivered actionable recommendations to improve player experience, reduce frustration points, and enhance overall game flow.
-            </p>
-            <div class="game-images">
-                <img src="Screenshot 2025-04-28 144902.png" alt="Screenshot 1" class="game-image" onclick="openModal(this)">
-                <img src="Screenshot 2025-04-28 144926.png" alt="Screenshot 2" class="game-image" onclick="openModal(this)">
-                <img src="Screenshot 2025-04-28 144952.png" alt="Screenshot 3" class="game-image" onclick="openModal(this)">
-                <img src="Screenshot 2025-04-28 144959.png" alt="Screenshot 4" class="game-image" onclick="openModal(this)">
-                <img src="Screenshot 2025-04-28 145006.png" alt="Screenshot 5" class="game-image" onclick="openModal(this)">
-            </div>
+            <h3>Game Title</h3>
+            <p>No description provided yet.</p>
         </div>
-
+        <div class="game-card">
+            <h3>Game Title</h3>
+            <p>No description provided yet.</p>
+        </div>
+        <div class="game-card">
+            <h3>Game Title</h3>
+            <p>No description provided yet.</p>
+        </div>
+        <div class="game-card">
+            <h3>Game Title</h3>
+            <p>No description provided yet.</p>
+        </div>
+        <div class="game-card">
+            <h3>Game Title</h3>
+            <p>No description provided yet.</p>
+        </div>
         <!-- Additional empty game boxes -->
         <div class="game-card">
             <h3>Game Title</h3>
             <p>No description provided yet.</p>
         </div>
-
-        <div class="game-card">
-            <h3>Game Title</h3>
-            <p>No description provided yet.</p>
-        </div>
-
-        <div class="game-card">
-            <h3>Game Title</h3>
-            <p>No description provided yet.</p>
-        </div>
-
-        <div class="game-card">
-            <h3>Game Title</h3>
-            <p>No description provided yet.</p>
-        </div>
-
         <div class="game-card">
             <h3>Game Title</h3>
             <p>No description provided yet.</p>
