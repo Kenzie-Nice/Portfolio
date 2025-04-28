@@ -77,23 +77,35 @@
         .games {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 1rem;
+            gap: 1.5rem;
             margin-top: 2rem;
         }
 
         .game-card {
             background-color: #ffffff;
-            padding: 1rem;
+            padding: 1.5rem;
             border: 1px solid #dee2e6;
-            border-radius: 8px;
+            border-radius: 12px;
             text-align: center;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
         }
 
         .game-card h3 {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             color: #000000; /* Black text for game titles */
             margin-bottom: 0.5rem;
+        }
+
+        .game-card p {
+            font-size: 1rem;
+            color: #000000; /* Black text for the descriptions */
+            margin-bottom: 1rem;
+        }
+
+        .game-card:hover {
+            transform: translateY(-10px); /* Fancy hover effect */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
         }
 
         .game-images {
@@ -127,9 +139,8 @@
         }
 
         /* Lightbox styles */
-        /* The Modal (background) */
         .modal {
-            display: none; /* Hidden by default */
+            display: none;
             position: fixed;
             z-index: 1;
             padding-top: 100px;
@@ -141,7 +152,6 @@
             background-color: rgba(0, 0, 0, 0.9);
         }
 
-        /* Modal Content */
         .modal-content {
             margin: auto;
             display: block;
@@ -149,7 +159,6 @@
             max-width: 700px;
         }
 
-        /* Close Button */
         .close {
             position: absolute;
             top: 15px;
@@ -167,7 +176,6 @@
             cursor: pointer;
         }
 
-        /* Media queries for responsiveness */
         @media (max-width: 768px) {
             nav a {
                 display: block;
@@ -226,60 +234,63 @@
                 - Suggested UI/UX improvements for tutorial clarity, emphasizing simplified control instructions for accessibility to a wider audience.<br><br>
                 - Delivered actionable recommendations to improve player experience, reduce frustration points, and enhance overall game flow.
             </p>
-            <!-- Multiple images for the game -->
             <div class="game-images">
                 <img src="Screenshot 2025-04-28 144902.png" alt="Screenshot 1" class="game-image" onclick="openModal(this)">
                 <img src="Screenshot 2025-04-28 144926.png" alt="Screenshot 2" class="game-image" onclick="openModal(this)">
                 <img src="Screenshot 2025-04-28 144952.png" alt="Screenshot 3" class="game-image" onclick="openModal(this)">
                 <img src="Screenshot 2025-04-28 144959.png" alt="Screenshot 4" class="game-image" onclick="openModal(this)">
-                <img src="Screenshot 2025-04-28 145111.png"  alt="Screenshot 5" class="game-image" onclick="openModal(this)">
-                <img src="Screenshot 2025-04-28 145346.png" alt="Screenshot 6" class="game-image" onclick="openModal(this)">
+                <img src="Screenshot 2025-04-28 145006.png" alt="Screenshot 5" class="game-image" onclick="openModal(this)">
             </div>
         </div>
+
+        <!-- Additional empty game boxes -->
         <div class="game-card">
-            <h3>Game Title 2</h3>
-            <p>Role: QA Tester</p>
-            <p> 
-                - [Your detailed role and tasks in this game here]
-            </p>
-            <!-- Multiple images for Game Title 2 -->
-            <div class="game-images">
-                <img src="image4.jpg" alt="Screenshot 1" class="game-image" onclick="openModal(this)">
-                <img src="image5.jpg" alt="Screenshot 2" class="game-image" onclick="openModal(this)">
-                <img src="image6.jpg" alt="Screenshot 3" class="game-image" onclick="openModal(this)">
-            </div>
+            <h3>Game Title</h3>
+            <p>No description provided yet.</p>
+        </div>
+
+        <div class="game-card">
+            <h3>Game Title</h3>
+            <p>No description provided yet.</p>
+        </div>
+
+        <div class="game-card">
+            <h3>Game Title</h3>
+            <p>No description provided yet.</p>
+        </div>
+
+        <div class="game-card">
+            <h3>Game Title</h3>
+            <p>No description provided yet.</p>
+        </div>
+
+        <div class="game-card">
+            <h3>Game Title</h3>
+            <p>No description provided yet.</p>
         </div>
     </div>
 </section>
 
-<section id="contact">
-    <h2>Contact</h2>
-    <p>Email: your.email@example.com</p>
-    <p>LinkedIn: linkedin.com/in/yourprofile</p>
-</section>
-
 <footer>
-    <p>&copy; 2025 Mackenzie Nice. All rights reserved.</p>
+    <p>&copy; 2025 Mackenzie Nice | QA Tester Portfolio</p>
 </footer>
 
-<!-- Lightbox Modal -->
-<div id="lightbox" class="modal">
+<!-- Modal for image lightbox -->
+<div id="modal" class="modal">
     <span class="close" onclick="closeModal()">&times;</span>
-    <img class="modal-content" id="modal-img">
+    <img class="modal-content" id="modal-image">
 </div>
 
 <script>
-    // Open the modal with the clicked image
-    function openModal(img) {
-        const modal = document.getElementById("lightbox");
-        const modalImg = document.getElementById("modal-img");
+    function openModal(image) {
+        var modal = document.getElementById("modal");
+        var modalImage = document.getElementById("modal-image");
         modal.style.display = "block";
-        modalImg.src = img.src;
+        modalImage.src = image.src;
     }
 
-    // Close the modal
     function closeModal() {
-        const modal = document.getElementById("lightbox");
+        var modal = document.getElementById("modal");
         modal.style.display = "none";
     }
 </script>
