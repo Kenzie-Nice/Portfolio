@@ -3,123 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mackenzie Nice | QA Tester </title>
+    <title>QA Tester Portfolio</title>
     <style>
         body {
             margin: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f8f9fa;
-            color: #212529;
+            background-color: #f4f4f4;
+            color: #333;
         }
+
         header {
-            background-color: #212529;
-            color: #f8f9fa;
-            padding: 2rem 1rem;
+            background-color: #00bcd4; /* Pretty cyan blue */
+            color: white;
+            padding: 20px;
             text-align: center;
         }
-        nav {
-            margin-top: 1rem;
-        }
-        nav a {
-            color: #f8f9fa;
-            margin: 0 1rem;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        section {
-            padding: 4rem 2rem;
+
+        main {
+            padding: 40px 20px;
             max-width: 1000px;
             margin: 0 auto;
         }
+
+        section {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
         h2 {
-            color: #212529;
-            border-bottom: 2px solid #212529;
-            padding-bottom: 0.5rem;
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #00bcd4;
         }
-        .games {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 1rem;
-            margin-top: 2rem;
+
+        h3 {
+            font-size: 24px;
+            margin-top: 0;
         }
-        .game-card {
-            background-color: #ffffff;
-            padding: 1rem;
-            border: 1px solid #dee2e6;
-            border-radius: 8px;
-            text-align: center;
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.6;
         }
-        footer {
-            background-color: #212529;
-            color: #f8f9fa;
-            text-align: center;
-            padding: 1rem;
-            margin-top: 2rem;
+
+        ul {
+            padding-left: 20px;
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Your Name</h1>
-    <p>QA Tester | Game Quality Assurance Specialist</p>
-    <nav>
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#games">Games</a>
-        <a href="#contact">Contact</a>
-    </nav>
+    <h1>QA Tester Portfolio</h1>
 </header>
 
-<section id="about">
-    <h2>About Me</h2>
-    <p>I am a QA tester dedicated to enhancing the quality, stability, and player experience of game projects. With a strong background in bug identification, reporting, and regression testing, I apply methodical testing strategies across multiple platforms and engines, including Unreal Engine and Unity. I focus on maintaining high standards of functionality, performance, and user experience, working closely with development teams to ensure that every project meets its design and technical goals
-    </p>
-</section>
+<main>
 
-<section id="experience">
-    <h2>Experience</h2>
-    <ul>
-        <li>Bug reporting, tracking, and regression testing</li>
-        <li>Supported development by supplying feedback on game mechanics, UX, and design flow"</li>
-        <li>Collaboration with development and design teams</li>
-        <li>Performance optimization testing</li>
-    </ul>
-</section>
+    <section>
+        <h2>About Me</h2>
+        <p>I am a dedicated QA Tester focused on gameplay quality, player experience, and detailed feedback. I specialize in identifying bugs, providing actionable design suggestions, and working closely with development teams to ensure polished releases.</p>
+    </section>
 
-<section id="games">
-    <h2>Games I Have Assisted In Testing</h2>
-    <div class="games">
-        <div class="game-card">
-            <h3>Terminull Brigade</h3>
-            <p>Role: QA Tester</p>
+    <section>
+        <h2>Experience</h2>
+        <div>
+            <h3>Troleu</h3>
+            <p><strong>Role:</strong> QA Tester</p>
+            <ul>
+                <li>Identified and documented gameplay logic issues, including soft lock scenarios caused by NPC interactions (e.g., Inspector boarding events locking doors and blocking player progression).</li>
+                <li>Reported collision and movement bugs, such as multiple NPCs overlapping and becoming stuck, requiring manual intervention to resolve.</li>
+                <li>Provided feedback on confusing gameplay elements, focusing on unclear player expectations during time-sensitive events (e.g., limited response window when the Inspector boards).</li>
+                <li>Suggested UI/UX improvements for tutorial clarity, emphasizing simplified control instructions for accessibility to a wider audience.</li>
+                <li>Delivered actionable recommendations to improve player experience, reduce frustration points, and enhance overall game flow.</li>
+            </ul>
         </div>
-        <div class="game-card">
-            <div>
-    <h3>Troleu</h3>
-    <p><strong>Role:</strong> QA Tester</p>
-    <ul>
-        <li>Identified and documented gameplay logic issues, including soft lock scenarios caused by NPC interactions (e.g., Inspector boarding events locking doors and blocking player progression).</li>
-        <li>Reported collision and movement bugs, such as multiple NPCs overlapping and becoming stuck, requiring manual intervention to resolve.</li>
-        <li>Provided feedback on confusing gameplay elements, focusing on unclear player expectations during time-sensitive events (e.g., limited response window when the Inspector boards).</li>
-        <li>Suggested UI/UX improvements for tutorial clarity, emphasizing simplified control instructions for accessibility to a wider audience.</li>
-        <li>Delivered actionable recommendations to improve player experience, reduce frustration points, and enhance overall game flow.</li>
-    </ul>
-</div>
+    </section>
 
-        <!-- Add more as needed -->
-    </div>
-</section>
+    <section>
+        <h2>Skills</h2>
+        <ul>
+            <li>Bug identification, reproduction, and documentation</li>
+            <li>Gameplay logic and progression testing</li>
+            <li>Collision and pathfinding issue detection</li>
+            <li>Soft lock and progression blocker analysis</li>
+            <li>UI/UX feedback and player accessibility improvements</li>
+            <li>Regression and performance testing</li>
+            <li>Collaboration with development and design teams</li>
+            <li>Clear documentation of confusing or unclear gameplay mechanics</li>
+        </ul>
+    </section>
 
-<section id="contact">
-    <h2>Contact</h2>
-    <p>Email: your.email@example.com</p>
-    <p>LinkedIn: linkedin.com/in/yourprofile</p>
-</section>
-
-<footer>
-    <p>&copy; 2025 Your Name. All rights reserved.</p>
-</footer>
+</main>
 
 </body>
 </html>
