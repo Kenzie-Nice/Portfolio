@@ -76,6 +76,21 @@
             margin-bottom: 0.5rem;
         }
 
+        .game-images {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .game-image {
+            width: 100%;
+            max-width: 250px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
         footer {
             background-color: #212529;
             color: #f8f9fa;
@@ -145,6 +160,12 @@
                 - Suggested UI/UX improvements for tutorial clarity, emphasizing simplified control instructions for accessibility to a wider audience.<br><br>
                 - Delivered actionable recommendations to improve player experience, reduce frustration points, and enhance overall game flow.
             </p>
+            <!-- Multiple images for the game -->
+            <div class="game-images">
+                <img src="image1.jpg" alt="Screenshot 1" class="game-image">
+                <img src="image2.jpg" alt="Screenshot 2" class="game-image">
+                <img src="image3.jpg" alt="Screenshot 3" class="game-image">
+            </div>
         </div>
         <div class="game-card">
             <h3>Game Title 2</h3>
@@ -152,6 +173,12 @@
             <p> 
                 - [Your detailed role and tasks in this game here]
             </p>
+            <!-- Multiple images for Game Title 2 -->
+            <div class="game-images">
+                <img src="image4.jpg" alt="Screenshot 1" class="game-image">
+                <img src="image5.jpg" alt="Screenshot 2" class="game-image">
+                <img src="image6.jpg" alt="Screenshot 3" class="game-image">
+            </div>
         </div>
         <!-- Additional game cards can be added here -->
     </div>
