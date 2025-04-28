@@ -5,55 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mackenzie Nice | QA Tester Portfolio</title>
     <style>
+        /* Body styles */
         body {
             margin: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #000000; /* Black background */
-            color: #ffffff; /* White text color */
+            background-color: #212529;
+            color: #f8f9fa;
         }
 
+        /* Header styles */
         header {
-            background-color: #009688; /* Deep cyan blue */
+            background: linear-gradient(to right, #009688, #004d40); /* Gradient background */
             color: #ffffff; /* White text */
-            padding: 2rem 1rem;
+            padding: 3rem 2rem;
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Shadow effect */
+            border-bottom: 2px solid #00bcd4;
+            border-radius: 0 0 20px 20px; /* Rounded bottom corners */
+            position: relative;
         }
 
-        nav {
-            margin-top: 1rem;
+        header h1 {
+            font-size: 3rem; /* Larger title */
+            letter-spacing: 2px;
+            font-family: 'Arial Black', sans-serif; /* Bold, unique font */
+            color: #ffffff;
+            text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow for text */
+        }
+
+        header p {
+            font-size: 1.2rem;
+            font-weight: 300;
         }
 
         nav a {
-            color: #ffffff; /* White text for links */
-            margin: 0 1rem;
+            color: #ffffff;
+            margin: 0 1.5rem;
             text-decoration: none;
             font-weight: bold;
             font-size: 1.1rem;
+            transition: transform 0.3s ease;
         }
 
         nav a:hover {
             color: #00bcd4;
+            transform: scale(1.1); /* Hover effect */
         }
 
+        /* Section styles */
         section {
             padding: 4rem 2rem;
             max-width: 1000px;
             margin: 0 auto;
-            background-color: #1e1e1e; /* Darker background for sections */
-            border-radius: 12px; 
+            background-color: #f8f9fa;
+            border-radius: 12px;
             box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
             margin-bottom: 2rem;
             border: 2px solid #009688;
         }
 
         h2 {
-            color: #ffffff; /* White text for section titles */
+            color: #212529;
             border-bottom: 2px solid #009688;
             padding-bottom: 0.5rem;
             margin-bottom: 1rem;
         }
 
+        /* Games section styles */
         .games {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -62,7 +80,7 @@
         }
 
         .game-card {
-            background-color: #333333; /* Dark background for game cards */
+            background-color: #ffffff;
             padding: 1rem;
             border: 1px solid #dee2e6;
             border-radius: 8px;
@@ -72,7 +90,7 @@
 
         .game-card h3 {
             font-size: 1.2rem;
-            color: #ffffff; /* White text for game titles */
+            color: #212529;
             margin-bottom: 0.5rem;
         }
 
@@ -91,9 +109,10 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
+        /* Footer styles */
         footer {
             background-color: #212529;
-            color: #ffffff; /* White text for footer */
+            color: #f8f9fa;
             text-align: center;
             padding: 1rem;
             margin-top: 2rem;
@@ -104,6 +123,7 @@
             font-size: 0.9rem;
         }
 
+        /* Media queries for responsiveness */
         @media (max-width: 768px) {
             nav a {
                 display: block;
@@ -144,13 +164,8 @@
         <li>Collaborating with development and design teams to identify and resolve issues</li>
         <li>Cross-platform and device compatibility testing</li>
         <li>Performance optimization and testing to ensure smooth gameplay</li>
-    </ul>
-    
-    <h3>Experience with Game Engines & Tools</h3>
-    <ul>
-        <li><strong>Unity:</strong> Experience with building and testing gameplay elements, scripting, and debugging in Unity projects. Involved in testing cross-platform functionality, ensuring stability across different device configurations, and performing regression testing.</li>
-        <li><strong>Unreal Engine:</strong> Familiar with testing projects in Unreal Engine, focusing on performance optimization, scripting issues, and ensuring that the game functions as expected on various hardware platforms.</li>
-        <li><strong>Jira:</strong> Experience using Jira for bug tracking, managing sprints, and collaborating with team members to report and resolve issues efficiently.</li>
+        <li>Experience in building and testing games in Unity and Unreal Engine</li>
+        <li>Familiarity with Jira for bug tracking, task management, and team collaboration</li>
     </ul>
 </section>
 
@@ -167,6 +182,7 @@
                 - Suggested UI/UX improvements for tutorial clarity, emphasizing simplified control instructions for accessibility to a wider audience.<br><br>
                 - Delivered actionable recommendations to improve player experience, reduce frustration points, and enhance overall game flow.
             </p>
+            <!-- Multiple images for the game -->
             <div class="game-images">
                 <img src="Screenshot 2025-04-28 144902.png" alt="Screenshot 1" class="game-image">
                 <img src="Screenshot 2025-04-28 144926.png" alt="Screenshot 2" class="game-image">
@@ -182,6 +198,7 @@
             <p> 
                 - [Your detailed role and tasks in this game here]
             </p>
+            <!-- Multiple images for Game Title 2 -->
             <div class="game-images">
                 <img src="image4.jpg" alt="Screenshot 1" class="game-image">
                 <img src="image5.jpg" alt="Screenshot 2" class="game-image">
