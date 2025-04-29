@@ -226,12 +226,12 @@
                 - Delivered actionable recommendations to improve player experience, reduce frustration points, and enhance overall game flow.<br><br>
             </p>
             <div class="game-images">
-                <img src="images/Screenshot_2025-04-28_144902.png" alt="Screenshot 1" class="game-image" onclick="openLightbox('images/Screenshot_2025-04-28_144902.png')">
-                <img src="images/Screenshot_2025-04-28_144926.png" alt="Screenshot 2" class="game-image" onclick="openLightbox('images/Screenshot_2025-04-28_144926.png')">
-                <img src="images/Screenshot_2025-04-28_144952.png" alt="Screenshot 3" class="game-image" onclick="openLightbox('images/Screenshot_2025-04-28_144952.png')">
-                <img src="images/Screenshot_2025-04-28_144959.png" alt="Screenshot 4" class="game-image" onclick="openLightbox('images/Screenshot_2025-04-28_144959.png')">
-                <img src="images/Screenshot_2025-04-28_145111.png" alt="Screenshot 5" class="game-image" onclick="openLightbox('images/Screenshot_2025-04-28_145111.png')">
-                <img src="images/Screenshot_2025-04-28_145346.png" alt="Screenshot 6" class="game-image" onclick="openLightbox('images/Screenshot_2025-04-28_145346.png')">
+                <img src="Screenshot_2025-04-28_144902.png" alt="Screenshot 1" class="game-image" onclick="openLightbox('Screenshot_2025-04-28_144902.png')">
+                <img src="Screenshot_2025-04-28_144926.png" alt="Screenshot 2" class="game-image" onclick="openLightbox('Screenshot_2025-04-28_144926.png')">
+                <img src="Screenshot_2025-04-28_144952.png" alt="Screenshot 3" class="game-image" onclick="openLightbox('Screenshot_2025-04-28_144952.png')">
+                <img src="Screenshot_2025-04-28_144959.png" alt="Screenshot 4" class="game-image" onclick="openLightbox('Screenshot_2025-04-28_144959.png')">
+                <img src="Screenshot_2025-04-28_145111.png" alt="Screenshot 5" class="game-image" onclick="openLightbox('Screenshot_2025-04-28_145111.png')">
+                <img src="Screenshot_2025-04-28_145346.png" alt="Screenshot 6" class="game-image" onclick="openLightbox('Screenshot_2025-04-28_145346.png')">
             </div>
         </div>
 
@@ -242,15 +242,13 @@
                 - Identified a critical crash loop triggered post-main menu, resulting in the game auto-restarting upon load.<br><br>
                 - Discovered delayed audio initialization; sound assets failed to trigger until a mouse interaction occurred.<br><br>
                 - Flagged severe control issues: default movement inputs were unintuitive and hindered player experience.<br><br>
-                - Reported late-stage tutorial delivery that left core mechanics unclear until well into gameplay.<br><br>
-                - Noted player model instability during death animations, causing noticeable visual glitches.<br><br>
-                - Documented frequent map clipping issues, allowing the player to phase through environment boundaries in multiple zones.<br><br>
+                - Conducted cross-platform testing (PC, Xbox) to ensure consistent performance and eliminate platform-specific issues.<br><br>
+                - Documented test cases and presented findings in weekly review meetings.<br><br>
             </p>
             <div class="game-images">
-                <img src="images/HA - stairfloat.png" alt="HA - stairfloat" class="game-image" onclick="openLightbox('images/HA - stairfloat.png')">
-                <img src="images/HA Wallclipping.png" alt="HA Wallclipping" class="game-image" onclick="openLightbox('images/HA Wallclipping.png')">
-                <img src="images/HA-Wall.png" alt="HA-Wall" class="game-image" onclick="openLightbox('images/HA-Wall.png')">
-                <img src="images/HA - Wall3.png" alt="HA - Wall3" class="game-image" onclick="openLightbox('images/HA - Wall3.png')">
+                <img src="HA - stairfloat.png" alt="Screenshot 1" class="game-image" onclick="openLightbox('HA - stairfloat.png')">
+                <img src="HA Wallclipping.png" alt="Screenshot 2" class="game-image" onclick="openLightbox('HA Wallclipping.png')">
+                <img src="HA-Wall.png" alt="Screenshot 3" class="game-image" onclick="openLightbox('HA-Wall.png')">
             </div>
         </div>
     </div>
@@ -258,31 +256,31 @@
 
 <section id="contact">
     <h2>Contact</h2>
-    <p>If you want to collaborate or need more information, feel free to reach out!</p>
-    <p>Email: <a href="mailto:mackenzienice@example.com">mackenzienice@example.com</a></p>
+    <p>Feel free to reach out to me through the following:</p>
+    <ul>
+        <li>Email: <a href="mailto:mackenzie.nice@example.com">mackenzie.nice@example.com</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/mackenzienice" target="_blank">linkedin.com/in/mackenzienice</a></li>
+    </ul>
 </section>
 
 <footer>
-    <p>&copy; 2025 Mackenzie Nice. All Rights Reserved.</p>
+    <p>&copy; 2025 Mackenzie Nice. All rights reserved.</p>
 </footer>
 
 <!-- Lightbox -->
-<div id="lightbox" class="lightbox" onclick="closeLightbox()">
-    <span class="lightbox-close">&times;</span>
-    <img class="lightbox-content" id="lightbox-image" src="" alt="">
+<div class="lightbox" id="lightbox">
+    <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-content" class="lightbox-content" src="" alt="Lightbox Image">
 </div>
 
 <script>
-    function openLightbox(image) {
-        var lightbox = document.getElementById("lightbox");
-        var lightboxImage = document.getElementById("lightbox-image");
-        lightbox.style.display = "block";
-        lightboxImage.src = image;
+    function openLightbox(imageSrc) {
+        document.getElementById('lightbox').style.display = "block";
+        document.getElementById('lightbox-content').src = imageSrc;
     }
 
     function closeLightbox() {
-        var lightbox = document.getElementById("lightbox");
-        lightbox.style.display = "none";
+        document.getElementById('lightbox').style.display = "none";
     }
 </script>
 
