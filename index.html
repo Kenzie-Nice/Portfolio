@@ -1,290 +1,80 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mackenzie Nice | QA Tester Portfolio</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #212529; /* Black background */
-            color: #000000; /* White text */
-        }
+import React, { useState } from "react";
+import { Dialog } from "@headlessui/react";
+import { Card, CardContent } from "@/components/ui/card";
 
-        header {
-            background-color: #009688; /* Deep cyan blue */
-            color: #f8f9fa;
-            padding: 3rem 1rem;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
+export default function Gallery() {
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [isOpen, setIsOpen] = useState(false);
 
-        header h1 {
-            font-size: 3rem;
-        }
+  const openLightbox = (image) => {
+    setSelectedImage(image);
+    setIsOpen(true);
+  };
 
-        header p {
-            font-size: 1.2rem;
-        }
+  const closeLightbox = () => {
+    setIsOpen(false);
+    setSelectedImage(null);
+  };
 
-        nav {
-            margin-top: 1rem;
-        }
+  const secondBoxImages = [
+    "/photos/photo1.jpg",
+    "/photos/photo2.jpg",
+    "/photos/photo3.jpg",
+    "/photos/photo4.jpg",
+    "/photos/photo5.jpg",
+  ];
 
-        nav a {
-            color: #f8f9fa;
-            margin: 0 1rem;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1rem;
-            padding: 0.4rem 0.8rem;
-            border-radius: 8px;
-            border: 2px solid transparent;
-            transition: all 0.3s ease;
-        }
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
+      {/* Box 1 */}
+      <Card className="bg-white rounded-2xl shadow-md p-4">
+        <CardContent>
+          <h2 className="text-xl font-bold mb-2">Box 1</h2>
+          <p className="text-gray-700">This is a regular content box.</p>
+        </CardContent>
+      </Card>
 
-        nav a:hover {
-            color: #00bcd4;
-            border-color: #00bcd4;
-        }
+      {/* Box 2 with lightbox */}
+      <Card className="bg-white rounded-2xl shadow-md p-4">
+        <CardContent>
+          <h2 className="text-xl font-bold mb-2">Photo Gallery</h2>
+          <div className="grid grid-cols-2 gap-2">
+            {secondBoxImages.map((src, idx) => (
+              <img
+                key={idx}
+                src={src}
+                alt={`Gallery ${idx + 1}`}
+                className="rounded-lg cursor-pointer hover:opacity-80"
+                onClick={() => openLightbox(src)}
+              />
+            ))}
+          </div>
+        </CardContent>
+      </Card>
 
-        section {
-            padding: 4rem 2rem;
-            max-width: 1000px;
-            margin: 0 auto;
-            background-color: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
-            margin-bottom: 2rem;
-            border: 2px solid #009688;
-        }
+      {/* Box 3 */}
+      <Card className="bg-white rounded-2xl shadow-md p-4">
+        <CardContent>
+          <h2 className="text-xl font-bold mb-2">Box 3</h2>
+          <p className="text-gray-700">Another regular content box.</p>
+        </CardContent>
+      </Card>
 
-        h2 {
-            color: #212529;
-            border-bottom: 2px solid #009688;
-            padding-bottom: 0.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .games {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .game-card {
-            background-color: #ffffff;
-            padding: 1rem;
-            border: 1px solid #dee2e6;
-            border-radius: 8px;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-        }
-
-        .game-card:hover {
-            transform: scale(1.05); /* Slightly enlarge the card */
-            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
-        }
-
-        .game-card h3 {
-            font-size: 1.4rem;
-            color: #212529;
-            margin-bottom: 0.5rem;
-        }
-
-        .game-images {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .game-image {
-            width: 100%;
-            max-width: 250px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            cursor: pointer;
-        }
-
-        .game-image:hover {
-            opacity: 0.8;
-        }
-
-        footer {
-            background-color: #212529;
-            color: #f8f9fa;
-            text-align: center;
-            padding: 1rem;
-            margin-top: 2rem;
-        }
-
-        footer p {
-            margin: 0;
-            font-size: 0.9rem;
-        }
-
-        /* Lightbox styling */
-        .lightbox {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-
-        .lightbox-content {
-            position: relative;
-            margin: auto;
-            display: block;
-            max-width: 80%;
-            max-height: 80%;
-        }
-
-        .lightbox-close {
-            position: absolute;
-            top: 15px;
-            right: 35px;
-            color: #f8f9fa;
-            font-size: 40px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-        }
-
-        .lightbox-close:hover,
-        .lightbox-close:focus {
-            color: #00bcd4;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        @media (max-width: 768px) {
-            nav a {
-                display: block;
-                margin: 1rem 0;
-            }
-
-            section {
-                padding: 3rem 1.5rem;
-            }
-        }
-    </style>
-</head>
-<body>
-
-<header>
-    <h1>Mackenzie Nice</h1>
-    <p>QA Tester | Game Quality Assurance</p>
-    <nav>
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#games">Games</a>
-        <a href="#contact">Contact</a>
-    </nav>
-</header>
-
-<section id="about">
-    <h2>About</h2>
-    <p>
-        I am a QA tester dedicated to enhancing the quality, stability, and player experience of game projects. With a strong background in bug identification, reporting, and regression testing, I apply methodical testing strategies across multiple platforms and engines, including Unreal Engine and Unity. I focus on maintaining high standards of functionality, performance, and user experience, 
-        working closely with development teams to ensure that every project meets its design and technical goals.
-    </p>
-</section>
-
-<section id="experience">
-    <h2>Experience</h2>
-    <ul>
-        <li>Bug reporting, tracking, and regression testing</li>
-        <li>Collaborating with development and design teams to identify and resolve issues</li>
-        <li>Conducting usability testing to assess the user experience, identifying areas for improvement in gameplay flow, UI design, and overall player engagement.</li>
-        <li>Cross-platform and device compatibility testing</li>
-        <li>Performance optimization and testing to ensure smooth gameplay</li>
-        <li>Experience using version control systems (e.g., Git) to track game builds, collaborate on fixes, and review code changes for potential quality issues.</li>
-        <li>Maintaining thorough documentation of test results, including screenshots, logs, and system performance metrics, to ensure clear communication and efficient bug tracking.</li>
-    </ul>
-</section>
-
-<section id="games">
-    <h2>Games I Have Assisted In Testing</h2>
-    <div class="games">
-        <div class="game-card">
-            <h3>Troleu</h3>
-            <p>Role: QA Tester</p>
-            <p>
-                - Identified and documented gameplay logic issues, including soft lock scenarios caused by NPC interactions (e.g., Inspector boarding events locking doors and blocking player progression).<br><br>
-                - Reported collision and movement bugs, such as multiple NPCs overlapping and becoming stuck, requiring manual intervention to resolve.<br><br>
-                - Provided feedback on confusing gameplay elements, focusing on unclear player expectations during time-sensitive events (e.g., limited response window when the Inspector boards).<br><br>
-                - Suggested UI/UX improvements for tutorial clarity, emphasizing simplified control instructions for accessibility to a wider audience.<br><br>
-                - Delivered actionable recommendations to improve player experience, reduce frustration points, and enhance overall game flow.<br><br>
-            </p>
-            <div class="game-images">
-                <img src="images/Screenshot_2025-04-28_144902.png" alt="Screenshot 1" class="game-image" onclick="openLightbox('images/Screenshot_2025-04-28_144902.png')">
-                <img src="images/Screenshot_2025-04-28_144926.png" alt="Screenshot 2" class="game-image" onclick="openLightbox('images/Screenshot_2025-04-28_144926.png')">
-                <img src="images/Screenshot_2025-04-28_144952.png" alt="Screenshot 3" class="game-image" onclick="openLightbox('images/Screenshot_2025-04-28_144952.png')">
-                <img src="images/Screenshot_2025-04-28_144959.png" alt="Screenshot 4" class="game-image" onclick="openLightbox('images/Screenshot_2025-04-28_144959.png')">
-                <img src="images/Screenshot_2025-04-28_145111.png" alt="Screenshot 5" class="game-image" onclick="openLightbox('images/Screenshot_2025-04-28_145111.png')">
-                <img src="images/Screenshot_2025-04-28_145346.png" alt="Screenshot 6" class="game-image" onclick="openLightbox('images/Screenshot_2025-04-28_145346.png')">
-            </div>
+      {/* Lightbox Dialog */}
+      <Dialog open={isOpen} onClose={closeLightbox} className="fixed z-50 inset-0 overflow-y-auto">
+        <div className="flex items-center justify-center min-h-screen p-4">
+          <Dialog.Overlay className="fixed inset-0 bg-black opacity-75" />
+          <div className="relative z-10 max-w-3xl w-full">
+            <img src={selectedImage} alt="Selected" className="rounded-lg shadow-lg w-full" />
+            <button
+              onClick={closeLightbox}
+              className="absolute top-2 right-2 text-white bg-black bg-opacity-50 rounded-full px-3 py-1"
+            >
+              Close
+            </button>
+          </div>
         </div>
-
-        <div class="game-card">
-            <h3>Game Title</h3>
-            <p>Role: QA Tester</p>
-            <p>
-                - Identified a critical crash loop triggered post-main menu, resulting in the game auto-restarting upon load.<br><br>
-                - Discovered delayed audio initialization; sound assets failed to trigger until a mouse interaction occurred.<br><br>
-                - Flagged severe control issues: default movement inputs were unintuitive and hindered player experience.<br><br>
-                - Reported late-stage tutorial delivery that left core mechanics unclear until well into gameplay.<br><br>
-                - Noted player model instability during death animations, causing noticeable visual glitches.<br><br>
-                - Documented frequent map clipping issues, allowing the player to phase through environment boundaries in multiple zones.<br><br>
-            </p>
-            <div class="game-images">
-                <img src="images/HA - stairfloat.png" alt="HA - stairfloat" class="game-image" onclick="openLightbox('images/HA - stairfloat.png')">
-                <img src="images/HA Wallclipping.png" alt="HA Wallclipping" class="game-image" onclick="openLightbox('images/HA Wallclipping.png')">
-                <img src="images/HA-Wall.png" alt="HA-Wall" class="game-image" onclick="openLightbox('images/HA-Wall.png')">
-                <img src="images/HA - Wall3.png" alt="HA - Wall3" class="game-image" onclick="openLightbox('images/HA - Wall3.png')">
-            </div>
-        </div>
+      </Dialog>
     </div>
-</section>
-
-<section id="contact">
-    <h2>Contact</h2>
-    <p>If you want to collaborate or need more information, feel free to reach out!</p>
-    <p>Email: <a href="mailto:mackenzienice@example.com">mackenzienice@example.com</a></p>
-</section>
-
-<footer>
-    <p>&copy; 2025 Mackenzie Nice. All Rights Reserved.</p>
-</footer>
-
-<!-- Lightbox -->
-<div id="lightbox" class="lightbox" onclick="closeLightbox()">
-    <span class="lightbox-close">&times;</span>
-    <img class="lightbox-content" id="lightbox-image" src="" alt="">
-</div>
-
-<script>
-    function openLightbox(image) {
-        var lightbox = document.getElementById("lightbox");
-        var lightboxImage = document.getElementById("lightbox-image");
-        lightbox.style.display = "block";
-        lightboxImage.src = image;
-    }
-
-    function closeLightbox() {
-        var lightbox = document.getElementById("lightbox");
-        lightbox.style.display = "none";
-    }
-</script>
-
-</body>
-</html>
+  );
+}
