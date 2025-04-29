@@ -175,7 +175,7 @@
 </section>
 
 <section id="games">
-    <h2>Games I Have Assisted In Testing</h2>
+    <h2>Quality Assurance Contributions</h2>
     <div class="games">
         <div class="game-card">
             <h3>Troleu</h3>
@@ -187,14 +187,33 @@
                 - Suggested UI/UX improvements for tutorial clarity, emphasizing simplified control instructions for accessibility to a wider audience.<br><br>
                 - Delivered actionable recommendations to improve player experience, reduce frustration points, and enhance overall game flow.<br><br>
             </p>
-            <div class="game-images">
-                <img src="Screenshot 2025-04-28 144902.png" alt="Screenshot 1" class="game-image">
-                <img src="Screenshot 2025-04-28 144926.png" alt="Screenshot 2" class="game-image">
-                <img src="Screenshot 2025-04-28 144952.png" alt="Screenshot 3" class="game-image">
-                <img src="Screenshot 2025-04-28 144959.png" alt="Screenshot 4" class="game-image">
-                <img src="Screenshot 2025-04-28 145111.png" alt="Screenshot 5" class="game-image">
-                <img src="Screenshot 2025-04-28 145346.png" alt="Screenshot 6" class="game-image">
-            </div>
+          <div class="game-images">
+    <figure class="game-image-container">
+        <img src="Screenshot 2025-04-28 144902.png" alt="Screenshot 1" class="game-image">
+        <figcaption>Ensuring NPC interactions function properly</figcaption>
+    </figure>
+    <figure class="game-image-container">
+        <img src="Screenshot 2025-04-28 144926.png" alt="Screenshot 2" class="game-image">
+        <figcaption>Verifying animation triggers during movement</figcaption>
+    </figure>
+    <figure class="game-image-container">
+        <img src="Screenshot 2025-04-28 144952.png" alt="Screenshot 3" class="game-image">
+        <figcaption>Testing UI response during menu navigation</figcaption>
+    </figure>
+    <figure class="game-image-container">
+        <img src="Screenshot 2025-04-28 144959.png" alt="Screenshot 4" class="game-image">
+        <figcaption>Validating NPC dialogue triggers and interaction flow.</figcaption>
+    </figure>
+    <figure class="game-image-container">
+        <img src="Screenshot 2025-04-28 145111.png" alt="Screenshot 5" class="game-image">
+        <figcaption>Description for Screenshot 5</figcaption>
+    </figure>
+    <figure class="game-image-container">
+        <img src="Screenshot 2025-04-28 145346.png" alt="Screenshot 6" class="game-image">
+        <figcaption>Checking button interactions and layout consistency</figcaption>
+    </figure>
+</div>
+
         </div>
 
         <!-- Blank game section ready for new game info -->
@@ -209,12 +228,26 @@
                 - Noted player model instability during death animations, causing noticeable visual glitches.<br><br>
                 - Documented frequent map clipping issues, allowing the player to phase through environment boundaries in multiple zones.<br><br>
             </p>
-            <div class="game-images">
-                <img src="HA - stairfloat.png" alt="HA - stairfloat.png" class="game-image">
-                <img src="HA Wallclipping.png" alt="HA Wallclipping.png" class="game-image">
-                <img src="HA-Wall.png" alt="HA-Wall.png" class="game-image">
-                <img src="HA - Wall3.png" alt="HA - Wall3.png" class="game-image">
-            </div>
+ <div class="game-images">
+    <div>
+        <img src="HA - stairfloat.png" alt="HA - stairfloat.png" class="game-image">
+        <p>Observed instance of incorrect player elevation when navigating staircase geometry. Subject appears to hover above surface rather than align with collision mesh.</p>
+    </div>
+    <div>
+        <img src="HA Wallclipping.png" alt="HA Wallclipping.png" class="game-image">
+        <p>Detected wall clipping issue where player partially intersects with environment geometry during lateral movement.</p>
+    </div>
+    <div>
+        <img src="HA-Wall.png" alt="HA-Wall.png" class="game-image">
+        <p>Player character visual model becomes partially embedded in wall when approaching at specific angles—likely due to insufficient collision bounds.</p>
+    </div>
+    <div>
+        <img src="HA - Wall3.png" alt="HA - Wall3.png" class="game-image">
+        <p>Reproducible case of geometry collision failure; player briefly phases through wall during traversal, indicating a possible collider misalignment or missing block volume.</p>
+    </div>
+</div>
+
+
         </div>
     </div>
 </section>
