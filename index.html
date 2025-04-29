@@ -8,12 +8,12 @@
         body {
             margin: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #212529; /* Black background */
-            color: #000000; /* White text */
+            background-color: #212529;
+            color: #000000;
         }
 
         header {
-            background-color: #009688; /* Deep cyan blue */
+            background-color: #009688;
             color: #f8f9fa;
             padding: 3rem 1rem;
             text-align: center;
@@ -85,8 +85,8 @@
         }
 
         .game-card:hover {
-            transform: scale(1.05); /* Slightly enlarge the card */
-            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+            transform: scale(1.05);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
         }
 
         .game-card h3 {
@@ -108,7 +108,6 @@
             max-width: 250px;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            cursor: pointer;
         }
 
         .game-image:hover {
@@ -126,44 +125,6 @@
         footer p {
             margin: 0;
             font-size: 0.9rem;
-        }
-
-        /* Lightbox styling */
-        .lightbox {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-
-        .lightbox-content {
-            position: relative;
-            margin: auto;
-            display: block;
-            max-width: 80%;
-            max-height: 80%;
-        }
-
-        .lightbox-close {
-            position: absolute;
-            top: 15px;
-            right: 35px;
-            color: #f8f9fa;
-            font-size: 40px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-        }
-
-        .lightbox-close:hover,
-        .lightbox-close:focus {
-            color: #00bcd4;
-            text-decoration: none;
-            cursor: pointer;
         }
 
         @media (max-width: 768px) {
@@ -194,8 +155,7 @@
 <section id="about">
     <h2>About</h2>
     <p>
-        I am a QA tester dedicated to enhancing the quality, stability, and player experience of game projects. With a strong background in bug identification, reporting, and regression testing, I apply methodical testing strategies across multiple platforms and engines, including Unreal Engine and Unity. I focus on maintaining high standards of functionality, performance, and user experience, 
-        working closely with development teams to ensure that every project meets its design and technical goals.
+        I am a QA tester dedicated to enhancing the quality, stability, and player experience of game projects. With a strong background in bug identification, reporting, and regression testing, I apply methodical testing strategies across multiple platforms and engines, including Unreal Engine and Unity.
     </p>
 </section>
 
@@ -204,11 +164,7 @@
     <ul>
         <li>Bug reporting, tracking, and regression testing</li>
         <li>Collaborating with development and design teams to identify and resolve issues</li>
-        <li>Conducting usability testing to assess the user experience, identifying areas for improvement in gameplay flow, UI design, and overall player engagement.</li>
         <li>Cross-platform and device compatibility testing</li>
-        <li>Performance optimization and testing to ensure smooth gameplay</li>
-        <li>Experience using version control systems (e.g., Git) to track game builds, collaborate on fixes, and review code changes for potential quality issues.</li>
-        <li>Maintaining thorough documentation of test results, including screenshots, logs, and system performance metrics, to ensure clear communication and efficient bug tracking.</li>
     </ul>
 </section>
 
@@ -217,38 +173,22 @@
     <div class="games">
         <div class="game-card">
             <h3>Troleu</h3>
-            <p>Role: QA Tester</p>
-            <p>
-                - Identified and documented gameplay logic issues, including soft lock scenarios caused by NPC interactions (e.g., Inspector boarding events locking doors and blocking player progression).<br><br>
-                - Reported collision and movement bugs, such as multiple NPCs overlapping and becoming stuck, requiring manual intervention to resolve.<br><br>
-                - Provided feedback on confusing gameplay elements, focusing on unclear player expectations during time-sensitive events (e.g., limited response window when the Inspector boards).<br><br>
-                - Suggested UI/UX improvements for tutorial clarity, emphasizing simplified control instructions for accessibility to a wider audience.<br><br>
-                - Delivered actionable recommendations to improve player experience, reduce frustration points, and enhance overall game flow.<br><br>
-            </p>
             <div class="game-images">
-                <img src="Screenshot_2025-04-28_144902.png" alt="Screenshot 1" class="game-image" onclick="openLightbox('Screenshot_2025-04-28_144902.png')">
-                <img src="Screenshot_2025-04-28_144926.png" alt="Screenshot 2" class="game-image" onclick="openLightbox('Screenshot_2025-04-28_144926.png')">
-                <img src="Screenshot_2025-04-28_144952.png" alt="Screenshot 3" class="game-image" onclick="openLightbox('Screenshot_2025-04-28_144952.png')">
-                <img src="Screenshot_2025-04-28_144959.png" alt="Screenshot 4" class="game-image" onclick="openLightbox('Screenshot_2025-04-28_144959.png')">
-                <img src="Screenshot_2025-04-28_145111.png" alt="Screenshot 5" class="game-image" onclick="openLightbox('Screenshot_2025-04-28_145111.png')">
-                <img src="Screenshot_2025-04-28_145346.png" alt="Screenshot 6" class="game-image" onclick="openLightbox('Screenshot_2025-04-28_145346.png')">
+                <img src="Screenshot_2025-04-28_144902.png" alt="Screenshot 1" class="game-image">
+                <img src="Screenshot_2025-04-28_144926.png" alt="Screenshot 2" class="game-image">
+                <img src="Screenshot_2025-04-28_144952.png" alt="Screenshot 3" class="game-image">
+                <img src="Screenshot_2025-04-28_144959.png" alt="Screenshot 4" class="game-image">
+                <img src="Screenshot_2025-04-28_145111.png" alt="Screenshot 5" class="game-image">
+                <img src="Screenshot_2025-04-28_145346.png" alt="Screenshot 6" class="game-image">
             </div>
         </div>
 
         <div class="game-card">
             <h3>Game Title</h3>
-            <p>Role: QA Tester</p>
-            <p>
-                - Identified a critical crash loop triggered post-main menu, resulting in the game auto-restarting upon load.<br><br>
-                - Discovered delayed audio initialization; sound assets failed to trigger until a mouse interaction occurred.<br><br>
-                - Flagged severe control issues: default movement inputs were unintuitive and hindered player experience.<br><br>
-                - Conducted cross-platform testing (PC, Xbox) to ensure consistent performance and eliminate platform-specific issues.<br><br>
-                - Documented test cases and presented findings in weekly review meetings.<br><br>
-            </p>
             <div class="game-images">
-                <img src="HA - stairfloat.png" alt="Screenshot 1" class="game-image" onclick="openLightbox('HA - stairfloat.png')">
-                <img src="Screenshot 2025-01-30_113735.png" alt="Screenshot 2" class="game-image" onclick="openLightbox('Screenshot 2025-01-30_113735.png')">
-                <img src="Screenshot_2025-04-18_170036.png" alt="Screenshot 3" class="game-image" onclick="openLightbox('Screenshot_2025-04-18_170036.png')">
+                <img src="HA - stairfloat.png" alt="Screenshot 1" class="game-image">
+                <img src="Screenshot 2025-01-30_113735.png" alt="Screenshot 2" class="game-image">
+                <img src="Screenshot_2025-04-18_170036.png" alt="Screenshot 3" class="game-image">
             </div>
         </div>
     </div>
@@ -262,26 +202,6 @@
 <footer>
     <p>&copy; 2025 Mackenzie Nice</p>
 </footer>
-
-<!-- Lightbox modal -->
-<div id="lightbox" class="lightbox" onclick="closeLightbox()">
-    <span class="lightbox-close">&times;</span>
-    <img class="lightbox-content" id="lightbox-img">
-</div>
-
-<script>
-    function openLightbox(src) {
-        const lightbox = document.getElementById('lightbox');
-        const lightboxImg = document.getElementById('lightbox-img');
-        lightboxImg.src = src;
-        lightbox.style.display = 'block';
-    }
-
-    function closeLightbox() {
-        const lightbox = document.getElementById('lightbox');
-        lightbox.style.display = 'none';
-    }
-</script>
 
 </body>
 </html>
