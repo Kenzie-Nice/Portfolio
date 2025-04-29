@@ -247,8 +247,8 @@
             </p>
             <div class="game-images">
                 <img src="HA - stairfloat.png" alt="Screenshot 1" class="game-image" onclick="openLightbox('HA - stairfloat.png')">
-                <img src="HA Wallclipping.png" alt="Screenshot 2" class="game-image" onclick="openLightbox('HA Wallclipping.png')">
-                <img src="HA-Wall.png" alt="Screenshot 3" class="game-image" onclick="openLightbox('HA-Wall.png')">
+                <img src="Screenshot 2025-01-30_113735.png" alt="Screenshot 2" class="game-image" onclick="openLightbox('Screenshot 2025-01-30_113735.png')">
+                <img src="Screenshot_2025-04-18_170036.png" alt="Screenshot 3" class="game-image" onclick="openLightbox('Screenshot_2025-04-18_170036.png')">
             </div>
         </div>
     </div>
@@ -256,31 +256,30 @@
 
 <section id="contact">
     <h2>Contact</h2>
-    <p>Feel free to reach out to me through the following:</p>
-    <ul>
-        <li>Email: <a href="mailto:mackenzie.nice@example.com">mackenzie.nice@example.com</a></li>
-        <li>LinkedIn: <a href="https://www.linkedin.com/in/mackenzienice" target="_blank">linkedin.com/in/mackenzienice</a></li>
-    </ul>
+    <p>If you'd like to get in touch, feel free to email me at <a href="mailto:mackenzie.nice@domain.com">mackenzie.nice@domain.com</a></p>
 </section>
 
 <footer>
-    <p>&copy; 2025 Mackenzie Nice. All rights reserved.</p>
+    <p>&copy; 2025 Mackenzie Nice</p>
 </footer>
 
-<!-- Lightbox -->
-<div class="lightbox" id="lightbox">
-    <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
-    <img id="lightbox-content" class="lightbox-content" src="" alt="Lightbox Image">
+<!-- Lightbox modal -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
 </div>
 
 <script>
-    function openLightbox(imageSrc) {
-        document.getElementById('lightbox').style.display = "block";
-        document.getElementById('lightbox-content').src = imageSrc;
+    function openLightbox(src) {
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        lightboxImg.src = src;
+        lightbox.style.display = 'block';
     }
 
     function closeLightbox() {
-        document.getElementById('lightbox').style.display = "none";
+        const lightbox = document.getElementById('lightbox');
+        lightbox.style.display = 'none';
     }
 </script>
 
