@@ -81,7 +81,7 @@
             border-radius: 8px;
             text-align: center;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease; /* Smooth transition for hover effect */
+            transition: all 0.3s ease;
         }
 
         .game-card:hover {
@@ -209,8 +209,6 @@
         <li>Performance optimization and testing to ensure smooth gameplay</li>
         <li>Experience using version control systems (e.g., Git) to track game builds, collaborate on fixes, and review code changes for potential quality issues.</li>
         <li>Maintaining thorough documentation of test results, including screenshots, logs, and system performance metrics, to ensure clear communication and efficient bug tracking.</li>
-
-
     </ul>
 </section>
 
@@ -228,16 +226,15 @@
                 - Delivered actionable recommendations to improve player experience, reduce frustration points, and enhance overall game flow.<br><br>
             </p>
             <div class="game-images">
-                <img src="Screenshot 2025-04-28 144902.png" alt="Screenshot 1" class="game-image" onclick="openLightbox('Screenshot 2025-04-28 144902.png')">
-                <img src="Screenshot 2025-04-28 144926.png" alt="Screenshot 2" class="game-image" onclick="openLightbox('Screenshot 2025-04-28 144926.png')">
-                <img src="Screenshot 2025-04-28 144952.png" alt="Screenshot 3" class="game-image" onclick="openLightbox('Screenshot 2025-04-28 144952.png')">
-                <img src="Screenshot 2025-04-28 144959.png" alt="Screenshot 4" class="game-image" onclick="openLightbox('Screenshot 2025-04-28 144959.png')">
-                <img src="Screenshot 2025-04-28 145111.png" alt="Screenshot 5" class="game-image" onclick="openLightbox('Screenshot 2025-04-28 145111.png')">
-                <img src="Screenshot 2025-04-28 145346.png" alt="Screenshot 6" class="game-image" onclick="openLightbox('Screenshot 2025-04-28 145346.png')">
+                <img src="images/Screenshot_2025-04-28_144902.png" alt="Screenshot 1" class="game-image" onclick="openLightbox('images/Screenshot_2025-04-28_144902.png')">
+                <img src="images/Screenshot_2025-04-28_144926.png" alt="Screenshot 2" class="game-image" onclick="openLightbox('images/Screenshot_2025-04-28_144926.png')">
+                <img src="images/Screenshot_2025-04-28_144952.png" alt="Screenshot 3" class="game-image" onclick="openLightbox('images/Screenshot_2025-04-28_144952.png')">
+                <img src="images/Screenshot_2025-04-28_144959.png" alt="Screenshot 4" class="game-image" onclick="openLightbox('images/Screenshot_2025-04-28_144959.png')">
+                <img src="images/Screenshot_2025-04-28_145111.png" alt="Screenshot 5" class="game-image" onclick="openLightbox('images/Screenshot_2025-04-28_145111.png')">
+                <img src="images/Screenshot_2025-04-28_145346.png" alt="Screenshot 6" class="game-image" onclick="openLightbox('images/Screenshot_2025-04-28_145346.png')">
             </div>
         </div>
 
-        <!-- Blank game section ready for new game info -->
         <div class="game-card">
             <h3>Game Title</h3>
             <p>Role: QA Tester</p>
@@ -250,11 +247,10 @@
                 - Documented frequent map clipping issues, allowing the player to phase through environment boundaries in multiple zones.<br><br>
             </p>
             <div class="game-images">
-               <!-- Fixed img tag in the "Game Title" section -->
-<img src="" alt="HA - stairfloat.png" class="game-image" onclick="openLightbox('HA - stairfloat.png')">
-<img src="" alt="HA Wallclipping.png" class="game-image" onclick="openLightbox('HA Wallclipping.png')">
-<img src="" alt="HA-Wall.png" class="game-image" onclick="openLightbox('HA-Wall.png')">
-<img src="" alt="HA - Wall3.png" class="game-image" onclick="openLightbox('HA - Wall3.png')">
+                <img src="images/HA - stairfloat.png" alt="HA - stairfloat" class="game-image" onclick="openLightbox('images/HA - stairfloat.png')">
+                <img src="images/HA Wallclipping.png" alt="HA Wallclipping" class="game-image" onclick="openLightbox('images/HA Wallclipping.png')">
+                <img src="images/HA-Wall.png" alt="HA-Wall" class="game-image" onclick="openLightbox('images/HA-Wall.png')">
+                <img src="images/HA - Wall3.png" alt="HA - Wall3" class="game-image" onclick="openLightbox('images/HA - Wall3.png')">
             </div>
         </div>
     </div>
@@ -262,28 +258,31 @@
 
 <section id="contact">
     <h2>Contact</h2>
-    <p>Phone: (406)217-2723</p>
-    <p>Email: kenzienice19@gmail.com</p>
-    <p>LinkedIn: linkedin.com/in/mackenzie-nice-a2170b269</p>
+    <p>If you want to collaborate or need more information, feel free to reach out!</p>
+    <p>Email: <a href="mailto:mackenzienice@example.com">mackenzienice@example.com</a></p>
 </section>
 
 <footer>
-    <p>&copy; 2025 Mackenzie Nice. All rights reserved.</p>
+    <p>&copy; 2025 Mackenzie Nice. All Rights Reserved.</p>
 </footer>
 
-<div id="lightbox" class="lightbox">
-    <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
-    <img class="lightbox-content" id="lightbox-image">
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-content" id="lightbox-image" src="" alt="">
 </div>
 
 <script>
-    function openLightbox(imageSrc) {
-        document.getElementById("lightbox").style.display = "block";
-        document.getElementById("lightbox-image").src = imageSrc;
+    function openLightbox(image) {
+        var lightbox = document.getElementById("lightbox");
+        var lightboxImage = document.getElementById("lightbox-image");
+        lightbox.style.display = "block";
+        lightboxImage.src = image;
     }
 
     function closeLightbox() {
-        document.getElementById("lightbox").style.display = "none";
+        var lightbox = document.getElementById("lightbox");
+        lightbox.style.display = "none";
     }
 </script>
 
