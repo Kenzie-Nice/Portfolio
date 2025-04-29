@@ -8,12 +8,12 @@
         body {
             margin: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #212529;
-            color: #000000;
+            background-color: #212529; /* Black background */
+            color: #000000; /* White text */
         }
 
         header {
-            background-color: #009688;
+            background-color: #009688; /* Deep cyan blue */
             color: #f8f9fa;
             padding: 3rem 1rem;
             text-align: center;
@@ -81,12 +81,12 @@
             border-radius: 8px;
             text-align: center;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
+            transition: all 0.3s ease; /* Smooth transition for hover effect */
         }
 
         .game-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+            transform: scale(1.05); /* Slightly enlarge the card */
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
         }
 
         .game-card h3 {
@@ -108,6 +108,7 @@
             max-width: 250px;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
         }
 
         .game-image:hover {
@@ -155,7 +156,8 @@
 <section id="about">
     <h2>About</h2>
     <p>
-        I am a QA tester dedicated to enhancing the quality, stability, and player experience of game projects. With a strong background in bug identification, reporting, and regression testing, I apply methodical testing strategies across multiple platforms and engines, including Unreal Engine and Unity.
+        I am a QA tester dedicated to enhancing the quality, stability, and player experience of game projects. With a strong background in bug identification, reporting, and regression testing, I apply methodical testing strategies across multiple platforms and engines, including Unreal Engine and Unity. I focus on maintaining high standards of functionality, performance, and user experience, 
+        working closely with development teams to ensure that every project meets its design and technical goals.
     </p>
 </section>
 
@@ -164,7 +166,11 @@
     <ul>
         <li>Bug reporting, tracking, and regression testing</li>
         <li>Collaborating with development and design teams to identify and resolve issues</li>
+        <li>Conducting usability testing to assess the user experience, identifying areas for improvement in gameplay flow, UI design, and overall player engagement.</li>
         <li>Cross-platform and device compatibility testing</li>
+        <li>Performance optimization and testing to ensure smooth gameplay</li>
+        <li>Experience using version control systems (e.g., Git) to track game builds, collaborate on fixes, and review code changes for potential quality issues.</li>
+        <li>Maintaining thorough documentation of test results, including screenshots, logs, and system performance metrics, to ensure clear communication and efficient bug tracking.</li>
     </ul>
 </section>
 
@@ -173,22 +179,41 @@
     <div class="games">
         <div class="game-card">
             <h3>Troleu</h3>
+            <p>Role: QA Tester</p>
+            <p>
+                - Identified and documented gameplay logic issues, including soft lock scenarios caused by NPC interactions (e.g., Inspector boarding events locking doors and blocking player progression).<br><br>
+                - Reported collision and movement bugs, such as multiple NPCs overlapping and becoming stuck, requiring manual intervention to resolve.<br><br>
+                - Provided feedback on confusing gameplay elements, focusing on unclear player expectations during time-sensitive events (e.g., limited response window when the Inspector boards).<br><br>
+                - Suggested UI/UX improvements for tutorial clarity, emphasizing simplified control instructions for accessibility to a wider audience.<br><br>
+                - Delivered actionable recommendations to improve player experience, reduce frustration points, and enhance overall game flow.<br><br>
+            </p>
             <div class="game-images">
-                <img src="Screenshot_2025-04-28_144902.png" alt="Screenshot 1" class="game-image">
-                <img src="Screenshot_2025-04-28_144926.png" alt="Screenshot 2" class="game-image">
-                <img src="Screenshot_2025-04-28_144952.png" alt="Screenshot 3" class="game-image">
-                <img src="Screenshot_2025-04-28_144959.png" alt="Screenshot 4" class="game-image">
-                <img src="Screenshot_2025-04-28_145111.png" alt="Screenshot 5" class="game-image">
-                <img src="Screenshot_2025-04-28_145346.png" alt="Screenshot 6" class="game-image">
+                <img src="Screenshot 2025-04-28 144902.png" alt="Screenshot 1" class="game-image">
+                <img src="Screenshot 2025-04-28 144926.png" alt="Screenshot 2" class="game-image">
+                <img src="Screenshot 2025-04-28 144952.png" alt="Screenshot 3" class="game-image">
+                <img src="Screenshot 2025-04-28 144959.png" alt="Screenshot 4" class="game-image">
+                <img src="Screenshot 2025-04-28 145111.png" alt="Screenshot 5" class="game-image">
+                <img src="Screenshot 2025-04-28 145346.png" alt="Screenshot 6" class="game-image">
             </div>
         </div>
 
+        <!-- Blank game section ready for new game info -->
         <div class="game-card">
             <h3>Game Title</h3>
+            <p>Role: QA Tester</p>
+            <p>
+                - Identified a critical crash loop triggered post-main menu, resulting in the game auto-restarting upon load.<br><br>
+                - Discovered delayed audio initialization; sound assets failed to trigger until a mouse interaction occurred.<br><br>
+                - Flagged severe control issues: default movement inputs were unintuitive and hindered player experience.<br><br>
+                - Reported late-stage tutorial delivery that left core mechanics unclear until well into gameplay.<br><br>
+                - Noted player model instability during death animations, causing noticeable visual glitches.<br><br>
+                - Documented frequent map clipping issues, allowing the player to phase through environment boundaries in multiple zones.<br><br>
+            </p>
             <div class="game-images">
-                <img src="HA - stairfloat.png" alt="Screenshot 1" class="game-image">
-                <img src="Screenshot 2025-01-30_113735.png" alt="Screenshot 2" class="game-image">
-                <img src="Screenshot_2025-04-18_170036.png" alt="Screenshot 3" class="game-image">
+                <img src="" alt="HA - stairfloat.png" class="game-image">
+                <img src="" alt="HA Wallclipping.png" class="game-image">
+                <img src="" alt="HA-Wall.png" class="game-image">
+                <img src="" alt="HA - Wall3.png" class="game-image">
             </div>
         </div>
     </div>
@@ -196,11 +221,13 @@
 
 <section id="contact">
     <h2>Contact</h2>
-    <p>If you'd like to get in touch, feel free to email me at <a href="mailto:mackenzie.nice@domain.com">mackenzie.nice@domain.com</a></p>
+    <p>Phone: (406)217-2723</p>
+    <p>Email: kenzienice19@gmail.com</p>
+    <p>LinkedIn: linkedin.com/in/mackenzie-nice-a2170b269</p>
 </section>
 
 <footer>
-    <p>&copy; 2025 Mackenzie Nice</p>
+    <p>&copy; 2025 Mackenzie Nice. All rights reserved.</p>
 </footer>
 
 </body>
