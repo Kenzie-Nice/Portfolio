@@ -393,7 +393,6 @@ Recommended to check main menu UI load order and graphical settings initializati
 
 - Possible delay in loading assets at game start.<br><br>
     </p>
-</section>
 <section id="contact">
   <h2 style="color:#212529; border-bottom:2px solid #009688; padding-bottom:.5rem; margin-bottom:1rem;">
     Contact
@@ -413,9 +412,14 @@ Recommended to check main menu UI load order and graphical settings initializati
     </li>
     <li style="display:flex; align-items:center; margin:.8rem 0; padding:.6rem 1rem; border-radius:8px; background:#f8f9fa;">
       <span style="margin-right:.6rem;">✉️</span>
-      <a href="mailto:kenzienice19@gmail.com" style="color:#009688; text-decoration:none; font-weight:bold;">
+      <span
+        id="email-text"
+        style="color:#009688; font-weight:bold; cursor:pointer;"
+        onclick="copyEmail()"
+        title="Click to copy"
+      >
         kenzienice19@gmail.com
-      </a>
+      </span>
     </li>
     <li style="display:flex; align-items:center; margin:.8rem 0; padding:.6rem 1rem; border-radius:8px; background:#f8f9fa;">
       <span style="margin-right:.6rem;">🔗</span>
@@ -426,7 +430,13 @@ Recommended to check main menu UI load order and graphical settings initializati
   </ul>
 </section>
 
-
+<script>
+  function copyEmail() {
+    navigator.clipboard.writeText('kenzienice19@gmail.com')
+      .then(() => alert('Email address copied to clipboard!'))
+      .catch(() => alert('Failed to copy; please select and copy manually.'));
+  }
+</script>
 
 
 <footer>
