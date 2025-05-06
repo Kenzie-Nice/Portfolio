@@ -150,6 +150,28 @@
             section {
                 padding: 3rem 1.5rem;
             }
+            /* Contact list styling */
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.contact-list li {
+    margin: 0.5rem 0;
+}
+.contact-list a {
+    color: #009688;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+    padding-bottom: 2px;
+}
+.contact-list a:hover {
+    border-color: #009688;
+}
+
+            
         }
     </style>
 </head>
@@ -191,8 +213,8 @@
     <ul>
         <li>Unreal Engine</li>
         <li>Unity</li>
-        <li>Minor experience in Jira</li>
-        <li>Minor experience in Trello</li>
+        <li>Jira</li>
+        <li>Trello</li>
     </ul>
 </section>
 
@@ -269,8 +291,8 @@
     </div>
 
     <div class="game-card">
-        <h3>Unnamed Fishing Demo</h3>
-        <p>Role: QA Tester</p>
+        <h3>Cast-n-Chill</h3>
+        <p>Role: Pre-Release Demo Tester</p>
         <p>
             - Highlighted lack of environmental audio and music, reducing immersion; recommended ambient sound design to enhance player engagement.<br><br>
             - Observed unnatural fish turning behavior; suggested smoothing animation transitions for more realistic movement and improved visual polish.<br><br>
@@ -359,12 +381,15 @@ Recommended to check main menu UI load order and graphical settings initializati
 </section>
 
 <section id="contact">
-    <h2>Contact</h2>
-    <p>Resume</p>
-    <p>Phone: <a href="tel:+14062172723">(406) 217-2723</a></p>
-    <p>Email: <a href="mailto:kenzienice19@gmail.com">kenzienice19@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/mackenzie-nice-a2170b269" target="_blank">linkedin.com/in/mackenzie-nice-a2170b269</a></p>
+  <h2>Contact</h2>
+  <ul class="contact-list">
+    <li><a href="/resume.pdf" target="_blank" download>Download Resume</a></li>
+    <li><a href="tel:+14062172723">Call: (406) 217‑2723</a></li>
+    <li><a href="mailto:kenzienice19@gmail.com">Email: kenzienice19@gmail.com</a></li>
+    <li><a href="https://www.linkedin.com/in/mackenzie-nice-a2170b269" target="_blank">LinkedIn Profile</a></li>
+  </ul>
 </section>
+
 
 
 <footer>
