@@ -150,26 +150,41 @@
             section {
                 padding: 3rem 1.5rem;
             }
-            /* Contact list styling */
+/* Enhanced Contact List */
 .contact-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 .contact-list li {
-    margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  margin: 0.8rem 0;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  transition: background-color 0.2s ease;
 }
+/* Emoji icons via pseudo‑elements */
+.contact-list li[data-type="resume"]   ::before { content: "📄"; margin-right: 0.6rem; }
+.contact-list li[data-type="phone"]    ::before { content: "📞"; margin-right: 0.6rem; }
+.contact-list li[data-type="email"]    ::before { content: "✉️"; margin-right: 0.6rem; }
+.contact-list li[data-type="linkedin"] ::before { content: "🔗"; margin-right: 0.6rem; }
+
+.contact-list li:hover {
+  background-color: #e0f2f1;
+}
+
 .contact-list a {
-    color: #009688;
-    text-decoration: none;
-    font-weight: bold;
-    border-bottom: 2px solid transparent;
-    transition: border-color 0.3s ease;
-    padding-bottom: 2px;
+  color: #009688;
+  text-decoration: none;
+  font-weight: bold;
+  flex: 1;
 }
 .contact-list a:hover {
-    border-color: #009688;
+  text-decoration: underline;
 }
+
 
             
         }
@@ -379,14 +394,23 @@ Recommended to check main menu UI load order and graphical settings initializati
 - Possible delay in loading assets at game start.<br><br>
     </p>
 </section>
-
 <section id="contact">
   <h2>Contact</h2>
   <ul class="contact-list">
-    <li><a href="/resume.pdf" target="_blank" download>Download Resume</a></li>
-    <li><a href="tel:+14062172723">Call: (406) 217‑2723</a></li>
-    <li><a href="mailto:kenzienice19@gmail.com">Email: kenzienice19@gmail.com</a></li>
-    <li><a href="https://www.linkedin.com/in/mackenzie-nice-a2170b269" target="_blank">LinkedIn Profile</a></li>
+    <li data-type="resume">
+      <a href="/resume.pdf" download target="_blank">Download Resume</a>
+    </li>
+    <li data-type="phone">
+      <a href="tel:+14062172723">(406) 217‑2723</a>
+    </li>
+    <li data-type="email">
+      <a href="mailto:kenzienice19@gmail.com">kenzienice19@gmail.com</a>
+    </li>
+    <li data-type="linkedin">
+      <a href="https://www.linkedin.com/in/mackenzie-nice-a2170b269" target="_blank">
+        LinkedIn Profile
+      </a>
+    </li>
   </ul>
 </section>
 
